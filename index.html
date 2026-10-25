@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Video Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    header p  { color: #8b949e; }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      border-color: #58a6ff;
+    }
+
+    /* Responsive 16:9 iframe wrapper */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      background: #000;
+    }
+
+    .video-wrapper iframe,
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-info { padding: 1rem 1.25rem; }
+    .video-info h2 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+    .video-info p  { font-size: 0.9rem; color: #8b949e; }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: #8b949e;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎬 My Video Collection</h1>
+    <p>Embedded videos from YouTube, Vimeo, MixDrop, and more</p>
+  </header>
+
+  <main class="video-grid">
+
+    <!-- ⭐ MixDrop embed (your link) -->
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://mixdrop.top/e/k0wj9prnc6jr6k"
+          title="MixDrop video"
+          allowfullscreen
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          referrerpolicy="no-referrer-when-downgrade"
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <h2>MixDrop Video</h2>
+        <p>Embedded from mixdrop.top</p>
+      </div>
+    </article>
+
+    <!-- YouTube embed -->
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <h2>YouTube Video</h2>
+        <p>Standard YouTube embed</p>
+      </div>
+    </article>
+
+    <!-- Vimeo embed -->
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/76979871"
+          title="Vimeo video"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <h2>Vimeo Video</h2>
+        <p>Standard Vimeo embed</p>
+      </div>
+    </article>
+
+    <!-- Direct MP4 -->
+    <article class="video-card">
+      <div class="video-wrapper">
+        <video controls preload="metadata">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-info">
+        <h2>Self-hosted MP4</h2>
+        <p>Hosted from a direct file URL</p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>Built with GitHub Pages ❤️</p>
+  </footer>
+</body>
+</html>
