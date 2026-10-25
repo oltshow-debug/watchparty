@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RACE CANADA EP 1</title>
+  <title>RACE CANADA</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -25,9 +25,9 @@
 
     .video-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
       gap: 2rem;
-      max-width: 900px;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -36,6 +36,11 @@
       border: 1px solid #58a6ff;
       border-radius: 12px;
       overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
     }
 
     /* Responsive 16:9 iframe wrapper */
@@ -83,13 +88,13 @@
 </head>
 <body>
   <header>
-    <h1>🎬 RACE CANADA EP 1</h1>
-    <p>Featured video</p>
+    <h1>🎬 RACE CANADA</h1>
+    <p>Watch all episodes</p>
   </header>
 
   <main class="video-grid">
 
-    <!-- RACE CANADA EP 1 — MixDrop embed -->
+    <!-- RACE CANADA EP 1 -->
     <article class="video-card">
       <div class="video-wrapper">
         <iframe
@@ -104,6 +109,25 @@
       <div class="video-info">
         <span class="badge">Episode 1</span>
         <h2>RACE CANADA EP 1</h2>
+        <p>Embedded from mixdrop.top</p>
+      </div>
+    </article>
+
+    <!-- RACE CANADA EP 2 -->
+    <article class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://mixdrop.top/e/ow7qgv0xidnwo"
+          title="RACE CANADA EP 2"
+          allowfullscreen
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          referrerpolicy="no-referrer-when-downgrade"
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <span class="badge">Episode 2</span>
+        <h2>RACE CANADA EP 2</h2>
         <p>Embedded from mixdrop.top</p>
       </div>
     </article>
