@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Video Page</title>
+  <title>RACE CANADA EP 1</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -25,23 +25,17 @@
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: 1fr;
       gap: 2rem;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     .video-card {
       background: #161b22;
-      border: 1px solid #30363d;
+      border: 1px solid #58a6ff;
       border-radius: 12px;
       overflow: hidden;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .video-card:hover {
-      transform: translateY(-4px);
-      border-color: #58a6ff;
     }
 
     /* Responsive 16:9 iframe wrapper */
@@ -53,8 +47,7 @@
       background: #000;
     }
 
-    .video-wrapper iframe,
-    .video-wrapper video {
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -64,8 +57,21 @@
     }
 
     .video-info { padding: 1rem 1.25rem; }
-    .video-info h2 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+    .video-info h2 { font-size: 1.25rem; margin-bottom: 0.25rem; }
     .video-info p  { font-size: 0.9rem; color: #8b949e; }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: #1f6feb;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
 
     footer {
       text-align: center;
@@ -77,18 +83,18 @@
 </head>
 <body>
   <header>
-    <h1>🎬 My Video Collection</h1>
-    <p>Embedded videos from YouTube, Vimeo, MixDrop, and more</p>
+    <h1>🎬 RACE CANADA EP 1</h1>
+    <p>Featured video</p>
   </header>
 
   <main class="video-grid">
 
-    <!-- ⭐ MixDrop embed (your link) -->
+    <!-- RACE CANADA EP 1 — MixDrop embed -->
     <article class="video-card">
       <div class="video-wrapper">
         <iframe
           src="https://mixdrop.top/e/k0wj9prnc6jr6k"
-          title="MixDrop video"
+          title="RACE CANADA EP 1"
           allowfullscreen
           allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
           referrerpolicy="no-referrer-when-downgrade"
@@ -96,56 +102,9 @@
         </iframe>
       </div>
       <div class="video-info">
-        <h2>MixDrop Video</h2>
+        <span class="badge">Episode 1</span>
+        <h2>RACE CANADA EP 1</h2>
         <p>Embedded from mixdrop.top</p>
-      </div>
-    </article>
-
-    <!-- YouTube embed -->
-    <article class="video-card">
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="YouTube video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-      <div class="video-info">
-        <h2>YouTube Video</h2>
-        <p>Standard YouTube embed</p>
-      </div>
-    </article>
-
-    <!-- Vimeo embed -->
-    <article class="video-card">
-      <div class="video-wrapper">
-        <iframe
-          src="https://player.vimeo.com/video/76979871"
-          title="Vimeo video"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-      <div class="video-info">
-        <h2>Vimeo Video</h2>
-        <p>Standard Vimeo embed</p>
-      </div>
-    </article>
-
-    <!-- Direct MP4 -->
-    <article class="video-card">
-      <div class="video-wrapper">
-        <video controls preload="metadata">
-          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="video-info">
-        <h2>Self-hosted MP4</h2>
-        <p>Hosted from a direct file URL</p>
       </div>
     </article>
 
